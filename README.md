@@ -1,3 +1,5 @@
+This project is a fork designed to use two antennas; the original project is [this one](https://github.com/system-linux/FazJammer)
+
 # ESP8266 BLE(Bluetooth) & Wi-Fi Jammer
 
 This project aims to develop a jammer using ESP8266 to interfere with BLE and Wi-Fi networks. The project utilizes the RF24 library to generate interference in the 2.4 GHz bands and provides user feedback via an OLED display.
@@ -24,13 +26,15 @@ The following libraries must be installed in Arduino IDE:
 
 | ESP8266 Pin | NRF24L01+ Pin | Description |
 |------------|---------------|-------------|
-| D2 (GPIO4) | CSN            | Chip Select |
-| D4 (GPIO2) | CE           | Module enable |
-| D5 (GPIO14)| SCK           | Serial clock signal |
-| D7 (GPIO13)| MOSI          | Data output |
-| D6 (GPIO12)| MISO          | Data input |
-| 3.3V       | VCC           | Power supply |
-| GND        | GND           | Ground |
+| D2 (GPIO4) | CSN antenna 1     | Chip Select | 
+| D4 (GPIO2) | CE  antenna 1     | Module enable |
+| D1 (GPIO5) | CSN antenna 2     | Chip Select | 
+| D3 (GPIO0) | CE  antenna 2     | Module enable |
+| D5 (GPIO14)| SCK antennas 1 e 2 | Serial clock signal |
+| D7 (GPIO13)| MOSI antennas 1 e 2 | Data output |
+| D6 (GPIO12)| MISO antennas 1 e 2 | Data input |
+| 3.3V       | VCC antennas 1 e 2 | Power supply |
+| GND        | GND antennas 1 e 2 | Ground |
 
 | ESP8266 Pin | OLED Pin | Description |
 |------------|---------|-------------|
